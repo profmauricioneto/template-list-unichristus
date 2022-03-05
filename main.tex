@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This project aims to create a test template or exercise list from the UNICHRISTUS).   %% 
+%% Author: Maurício Moreira Neto - Professor at UNICHRISTUS                              %%
+%% contacts:                                                                             %%
+%%    e-mail: mauricio.moreira@unichristus.edu.br                                        %%
+%%    linktree:  https://linktr.ee/maumneto                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{lib/unichristusdoc}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+
+%% Informations that will be insert in the table header 
+\def\course{Nome da Disciplina}
+\def\prof{Nome do Docente}
+\def\semester{XXXX.X}
+\def\codeCourse{XXXXXX}
+\def\registration{}
+\def\student{}
+\def\graduate{Nome do Curso}
+\def\theme{Descrição do Tema}
+
+\begin{document}
+    %% Table with the header
+    \makeheader
+    
+    %% Space for the instructions
+    \fbox{
+        \parbox{\textwidth}{
+            \begin{minipage}{\textwidth}
+                \makeinstructions
+                {
+                    \begin{instlist}
+                        \item Preencha o cabeçalho da folha pergunta com seus dados.
+                        \item  Todas as folhas respostas devem conter o nome a a matrícula do aluno.
+                        \item O preenchimento das respostas deve ser feito utilizando caneta (preta ou azul).
+                    \end{instlist}
+                }
+            \end{minipage}
+        }
+    }
+    
+    %% Space between the instructions and the questions.
+    \vspace{1cm}
+    \problem As questões podem ser elencadas usando o comando \textit{problem}. Se a questão possui subitens, basta utilizar o coomando \textit{subproblem}.
+    \subproblem Este é um exemplo de subproblema
+    \subproblem Este é um exemplo de segundo subproblema
+    
+    \vspace{1cm}
+    \problem Outra funcionalidade interessante: caso você queira colocar pontuação em cada questão, basta colocar o comando \textit{points} com o valor da pontuação da questão. \points{3.5}
+    
+    \vspace{1cm}
+    \problem A ideia é que este template seja sempre atualizado, visando atender a todas as necessidades dos usuários da UNICHRITUS. Caso possua alguma dica que melhore o template, é possível entrar em contato através do e-mail disposto nos comentários.\points{4}
+    
+    \vspace{1cm}
+    \problem Também é possível adicionar respostas por meio do comando \textit{answer}. \points{3}
+    \answer Exemplo de resposta da questão.
+    
+\end{document}

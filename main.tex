@@ -39,9 +39,24 @@
             \end{minipage}
         }
     }
-    
+    \vspace*{1cm}
     %% Space between the instructions and the questions.
-    \vspace{1cm}
+    
+    \fbox{
+        \parbox{\textwidth}{
+            \begin{minipage}{\textwidth}
+                \titlequestion
+                {
+                    \begin{questinst}
+                        \item Instruction 1
+                        \item Instruction 2
+                        \item Instruction 3
+                    \end{questinst}
+                }
+            \end{minipage}
+        }
+    }
+    % \vspace{0.2cm}
     \problem As questões podem ser elencadas usando o comando \textit{problem}. Se a questão possui subitens, basta utilizar o coomando \textit{subproblem}.
     \subproblem Este é um exemplo de subproblema
     \subproblem Este é um exemplo de segundo subproblema

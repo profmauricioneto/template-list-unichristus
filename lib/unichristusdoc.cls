@@ -80,6 +80,20 @@
     {\end{itemize}}   
 }
 
+\newcommand{\titlequestion}
+{
+    \fontsize{0.38cm}{0.2cm}\selectfont 
+    \begin{center}\textcolor{blue}{Question Instructions}\end{center}
+
+    \fontfamily{lmss}
+    \fontsize{0.35cm}{0.2cm}\selectfont 
+    \newenvironment{questinst}
+    {
+        \renewcommand{\labelitemi}{\color{black}$\ast$}
+    \begin{itemize}\itemsep{0em}}
+    {\end{itemize}}  
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% This part of code was modified from template of exercise list of Níckolas Alves
 %% Link: https://www.overleaf.com/latex/templates/lista-de-exercicios/pncrythxtyhj

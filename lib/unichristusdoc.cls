@@ -90,7 +90,7 @@
     \newenvironment{questinst}
     {
         \renewcommand{\labelitemi}{\color{black}$\ast$}
-    \begin{itemize}\itemsep{0em}}
+    \begin{itemize}\setlength\itemsep{0em}}
     {\end{itemize}}  
 }
 

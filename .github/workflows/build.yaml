@@ -15,3 +15,23 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+      - name: Create Release Version
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag: v1.1-${{ github.run_number }}
+          release_name: Automated build v1.1-${{ github.run_number }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: update-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: main.pdf
+          asset_name: result.pdf
+          asset_content_type: application/pdf 

@@ -21,8 +21,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag: v1.1-${{ github.run_number }}
-          release_name: Automated build v1.1-${{ github.run_number }}
+          tag: v1.1-${{ github.ref }}
+          release_name: Automated build v1.1-${{ github.ref }}
           draft: false
           prerelease: false
       - name: Upload Release Asset

@@ -15,6 +15,9 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+  release_latex:
+    runs_on: ubuntu-latest
+    steps:
       - name: Create Release Version
         id: create_release
         uses: actions/create-release@v1

@@ -21,7 +21,7 @@ jobs:
           path: main.pdf
 
       - name: Release Version
-        uses: profmauricioneto/template-list-unichristus/.github/workflows/release.yaml
+        uses: ./.github/workflows/release
   # release_latex:
   #   runs_on: ubuntu-latest
   #   steps:

@@ -16,7 +16,7 @@
 
 <!-- section -->
 ## Descrição
-<hr/>
+
 <p>Esse projeto tem o objetivo de desenvolver um template para listas de exercícios com LaTeX para a UNICHRITUS. Para atingir esse objetivo, foi criado um arquivo de classe chamado **unichristusdoc**, o qual possui um conjunto de ambientes e comandos relacionados ao documento. 
 
 
@@ -24,7 +24,7 @@ Este documento é destinado aos docentes da UNICHRISTUS que desejam utilizar um 
 
 
 ## Comandos
-<hr/>
+
 <b>Para inserir uma questão:</b> utilize o comando \problem para inserir uma nova questão.
 
 ```tex
@@ -50,17 +50,17 @@ Este documento é destinado aos docentes da UNICHRISTUS que desejam utilizar um 
 ```
 
 ## Dicas
-<hr/>
+
 <p>As instruções podem ser adaptadas pelo o usuário do template. Para isso, deve-se ir até o arquivo *main.tex* e os itens que estão entre \begin{instlist} e \end{instlist}</p>
 
 <p>O usuário deve alterar o conteúdo que está contido na planilha de informações (planilha no canto superior). Os campos são adaptáveis aos dados que o usuário quiser inserir.</p>
 
 ## Changelog
-<hr/>
-[Changelog File](/CHANGELOG.md)
+
+[Changelog File](./CHANGELOG.md)
 
 ## Autor
-<hr/>
+
 
 Desenvolvido por <b>Maurício Moreira Neto</b> :shipit: 
 

@@ -15,14 +15,17 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+  release_latex:
+    runs_on: ubuntu-latest
+    steps:
       - name: Create Release Version
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Automated build ${{ github.ref }}
+          tag_name: v1.1.1
+          release_name: Automated build v1.1.1
           draft: false
           prerelease: false
       - name: Upload Release Asset

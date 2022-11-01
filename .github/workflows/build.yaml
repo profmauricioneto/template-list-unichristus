@@ -19,6 +19,9 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+
+      - name: Release Version
+        uses: profmauricioneto/template-list-unichristus/.github/workflows/release.yaml
   # release_latex:
   #   runs_on: ubuntu-latest
   #   steps:

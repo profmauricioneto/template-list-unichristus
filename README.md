@@ -57,7 +57,7 @@ Este documento é destinado aos docentes da UNICHRISTUS que desejam utilizar um 
 
 ## Changelog
 <hr/>
-[Changelog File](/CHANGELOG.md)
+[Changelog File](./CHANGELOG.md)
 
 ## Autor
 <hr/>

@@ -21,7 +21,7 @@ jobs:
           path: main.pdf
 
       - name: Release Version
-        uses: ./.github/workflows/release
+        uses: ./.github/workflows/release.yml
   # release_latex:
   #   runs_on: ubuntu-latest
   #   steps:

@@ -22,7 +22,7 @@ jobs:
           name: PDF
           path: main.pdf
   release:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Create Release Version
         id: create_release

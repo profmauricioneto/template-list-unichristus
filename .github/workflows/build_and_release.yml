@@ -12,11 +12,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
           root_file: main.tex
-  upload:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
@@ -32,8 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref_name }}
-          release_name: Automated build ${{ github.ref_name }}
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          release_name: Automated Release ${{ steps.tag_version.outputs.new_tag }}
           draft: false
           prerelease: false
       - name: Upload Release Asset

@@ -30,8 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.tag_version.outputs.new_tag }}
-          release_name: Automated Release ${{ steps.tag_version.outputs.new_tag }}
+          tag_name: v1.1.5
+          release_name: Automated Release v1.1.5
           draft: false
           prerelease: false
       - name: Upload Release Asset

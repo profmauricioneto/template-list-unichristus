@@ -26,12 +26,14 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
+          name: main_artifact
           path: main.pdf
-  # release:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
+          retention-days: 5
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Create Release Version
         id: create_release
         uses: actions/create-release@v1
@@ -42,6 +44,12 @@ jobs:
           release_name: Automated Release v1.1.${{ github.run_number }}
           draft: false
           prerelease: false
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: main_artifact
+
 
       - name: Upload Release Asset
         id: update-release-asset
